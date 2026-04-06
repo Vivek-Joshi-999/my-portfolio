@@ -8,9 +8,18 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className='bg-blue-400 text-white flex  flex-col items-center justify-center'>
 
-      <h1 className='text-red-500'>Hello world</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
+  <h1>HELLO</h1>
     </div>
   )
 }
