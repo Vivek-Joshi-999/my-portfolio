@@ -1,0 +1,82 @@
+// import { motion } from "framer-motion";
+// import { useState, useEffect } from "react";
+// import { Menu, X } from "lucide-react";
+
+// export default function Navbar() {
+//   const [open, setOpen] = useState(false);
+//   const [scrolled, setScrolled] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setScrolled(window.scrollY > 50);
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <motion.header
+//       initial={{ y: -120, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ duration: 0.5 }}
+//       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+//         ${
+//           scrolled ? "bg-slate-900/60 backdrop-blur-md border-b border-white/10"
+//             : "bg-transparent"
+//         }`}
+//     >
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 flex justify-between items-center">
+
+//         {/* Logo */}
+//         <h1 className="text-white text-lg sm:text-xl font-bold">
+//           Port<span className="text-indigo-400">Folio</span>
+//         </h1>
+
+//         {/* Desktop Menu */}
+//         <nav className="hidden md:flex gap-6 text-slate-300">
+//           <a href="#" className="hover:text-indigo-400">Home</a>
+//           <a href="#" className="hover:text-indigo-400">About</a>
+//           <a href="#" className="hover:text-indigo-400">Projects</a>
+//           <a href="#" className="hover:text-indigo-400">Contact</a>
+//         </nav>
+
+//         {/* Mobile Button */}
+//         <button
+//           className="md:hidden text-white"
+//           onClick={() => setOpen(!open)}
+//         >
+//           {open ? <X /> : <Menu />}
+//         </button>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {open && (
+//         <motion.div
+//           initial={{ opacity: 0, height: 0 }}
+//           animate={{ opacity: 1, height: "auto" }}
+//           className="md:hidden bg-slate-900/80 backdrop-blur-md border-t border-white/10"
+//         >
+//           <div className="flex flex-col px-6 py-4 gap-4 text-slate-300">
+//             <a href="#" onClick={() => setOpen(false)}>Home</a>
+//             <a href="#" onClick={() => setOpen(false)}>About</a>
+//             <a href="#" onClick={() => setOpen(false)}>Projects</a>
+//             <a href="#" onClick={() => setOpen(false)}>Contact</a>
+//           </div>
+//         </motion.div>
+//       )}
+//     </motion.header>
+//   );
+// }
+
+// 10 Steps to Make This Navbar (Conceptual)
+// Import Needed Tools – Use React for state, Framer Motion for animation, and icons for hamburger/X.
+// Set Up Component – Create a Navbar component with states for mobile menu (open) and scroll detection (scrolled).
+// Detect Scroll – Add a listener to check how far the page is scrolled and update scrolled.
+// Create Navbar Container – Make the navbar fixed at top, with z-index to stay above content, and prepare it for background changes.
+// Add Flex Layout – Inside the navbar, set a container that aligns logo and menu horizontally and centers them vertically.
+// Add Logo – Place your logo or brand on the left with highlighted colors for style.
+// Create Desktop Menu – Show menu links horizontally on large screens and hide them on mobile.
+// Create Mobile Toggle Button – Add a hamburger icon that switches to X icon when clicked, controlling the open state.
+// Create Mobile Menu – Only display the mobile menu when open is true, and make it slide down with animation. Include links that close the menu when clicked.
+// Add Styling & Effects – Add background transparency, blur, borders, padding, and responsive spacing to make it look modern on all screen sizes.
