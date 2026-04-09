@@ -10,7 +10,11 @@ export default function App() {
       <div
         className="absolute fixed bottom-[550px] left-[-100px] w-[400px] h-[400px] 
         bg-blue-600 opacity-30 blur-[200px] rounded-full"></div>
+
+        <div className="realtive z-50">
+
       <Navbar></Navbar>
+        </div>
 
    
 <div className="relative z-10">
