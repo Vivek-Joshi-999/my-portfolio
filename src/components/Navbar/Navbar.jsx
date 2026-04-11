@@ -8,8 +8,15 @@ import NavItem from "./navitem";
 const Navbar = () => {
   const [open, setopen] = useState(false);
   const [scrolled, setscroll] = useState(false);
-  
-const navItems = ["Home", "About", "Skills", "Projects", "Education", "Contact"];
+
+  const navItems = [
+    "Home",
+    "About",
+    "Skills",
+    "Projects",
+    "Education",
+    "Contact",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +53,11 @@ const navItems = ["Home", "About", "Skills", "Projects", "Education", "Contact"]
           </span>
         </div>
 
-
-
-<nav className="hidden md:flex gap-8 text-slate-300 font-semibold">
-  {navItems.map((item) => (
-    <NavItem key={item} label={item} />
-  ))}
-</nav>
+        <nav className="hidden md:flex gap-8 text-slate-300 font-semibold">
+          {navItems.map((item) => (
+            <NavItem key={item} label={item} />
+          ))}
+        </nav>
 
         <button
           className="md:hidden p-2 text-slate-300 hover:text-white"
@@ -69,21 +74,14 @@ const navItems = ["Home", "About", "Skills", "Projects", "Education", "Contact"]
             transition={{ duration: 0.3 }}
             className=" md:hidden bg-slate-900/80 backdrop-blur-md border-t border-white/10 ">
             <div className="  flex flex-col px-6 py-4 gap-4 backdrop-blur-md border-t border-white/20 text-white font-semibold">
-              {[
-                "Home",
-                "About",
-                "Skills",
-                "Projects",
-                "Education",
-                "Contact",
-              ].map((item) => (
+              {navItems.map((item) => (
                 <motion.a
                   key={item}
                   href="#"
                   onClick={() => setopen(false)}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
-                  className="block origin-left">
+                  className=" w-fit origin-left hover:text-indigo-400">
                   {item}
                 </motion.a>
               ))}
