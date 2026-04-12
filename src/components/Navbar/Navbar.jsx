@@ -43,10 +43,10 @@ const Navbar = () => {
   
   `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex items-center justify-between  ">
-        <div className="flex gap-2 items-center justify-center">
+        <div className="flex gap-2 items-center justify-center ">
           <span className="bg-indigo-500/10 p-2 rounded-xl hover:bg-indigo-500/20 transition-colors">
             {" "}
-            <CodeXml className="text-indigo-400" />
+            <CodeXml className="text-indigo-400 animate-pulse" />
           </span>
           <span className="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-400">
             Port<span className="text-indigo-400">Folio</span>
