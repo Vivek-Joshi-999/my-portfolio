@@ -31,7 +31,7 @@ export default function Hero() {
               </h1>
 
               <h2 className=" text-xl md:text-2xl text-white font-medium max-w-xl mx-auto lg:mx-0">
-                MCA Student | Full Stack Developer | Cloud Computing Enthusiast
+                MCA Student | Full Stack Developer
               </h2>
             </motion.div>
 
@@ -46,11 +46,10 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-            initial={{opacity:0,y:20}}
-            animate={{opacity:1,y:0}}
-            transition={{duration:0.5, delay:0.2}}
-             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-            >
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href="#projects"
                 className="px-6 font-medium font-semibold  text-white rounded-xl py-3 group inline-flex transition-all items-center gap-1 bg-indigo-600 hover:scale-105 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]">
@@ -73,7 +72,38 @@ export default function Hero() {
             </motion.div>
           </div>
           {/* right section */}
-          <div className="right text-white"> </div>
+          <div className="flex-1 relative w-full max-w-md lg:max-w-none mx-auto ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                boxShadow: [
+                 "10px 0px 20px #000080",
+"0px 10px 20px #000080",
+"-10px 0px 20px #000080",
+"0px -10px 20px #000080",
+"10px 0px 20px #000080"
+                ],
+              }}
+              transition={{
+                opacity: { duration: 0.8 }, // runs once ✅
+                scale: { duration: 0.8 }, // runs once ✅
+                boxShadow: {
+                  duration: 6,
+                  ease: "linear",
+                  repeat: Infinity, // only shadow repeats ✅
+                },
+              }}
+              className="aspect-square md:aspect-[4/5] max-w-md mx-auto relative 
+   rounded-3xl overflow-hidden">
+              <motion.img
+                className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 "
+                src="https://images.unsplash.com/photo-1641108001784-cdf7d87b353f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB5b3VuZyUyMG1hbiUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NTM5ODI3M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Profile"
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
