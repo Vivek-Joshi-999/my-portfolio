@@ -1,6 +1,8 @@
-import Hero from "./Hero";
+import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./components/About/About";
 import './App.css'
+
 
 export default function App() {
   return (
@@ -19,7 +21,7 @@ export default function App() {
         {/* HERO */}
         <main className="flex flex-col items-center  ">
           <Hero />
-          
+          <About/>
         </main>
       </div>
     </div>
