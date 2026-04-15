@@ -3,7 +3,7 @@ import { CodeXml } from "lucide-react";
 import { ListCollapse } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import NavItem from "./navitem";
+import NavItem from "./NavItem";
 
 const Navbar = () => {
   const [open, setopen] = useState(false);
