@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="flex-1 space-y-8 text-center lg:text-left ">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="space-y-8">
               <div className="inline-flex bg-indigo-500/10 text-indigo-300  border-indigo-500/20  font-medium text-sm mb-2 items-center rounded-full gap-2 px-2 py-1.5">
