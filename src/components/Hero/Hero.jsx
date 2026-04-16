@@ -96,7 +96,7 @@ export default function Hero() {
                   repeat: Infinity, // only shadow repeats ✅
                 },
               }}
-              oun
+              
               className="md:aspect-[4/5] max-w-md mx-auto relative rounded-3xl ">
               <div className="rounded-3xl overflow-hidden">
                 <img
