@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import profile1 from "../../assets/profile1.png";
+import profile2 from "../../assets/profile2.png";
+
+
 import { ArrowRight, Download, Code, Braces } from "lucide-react";
 
 export default function Hero() {
@@ -101,7 +105,7 @@ export default function Hero() {
               <div className="rounded-3xl overflow-hidden">
                 <img
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500  "
-                  src="https://i.pinimg.com/1200x/36/24/85/362485cff39036464d0e54b4bdd3a5b8.jpg"
+                  src={profile2}
                   alt="Profile"
                 />
               </div>

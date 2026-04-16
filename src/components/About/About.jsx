@@ -1,11 +1,13 @@
-import { User, Code, Target } from "lucide-react";
+import { User, Code, Target, Zap, CircleCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import profile2 from "../../assets/profile2.png";
 
 const About = () => {
+  const strengths = ["Problem Solving", " Time management", "Quik learner"];
   return (
-    <section id="About py-20 md:py-32 relative">
-      <div className="container max-w-7xl mx-auto md:px-12">
-        <div className="heading flex flex-col items-center justify-center text-center mb-16 md:mb-24">
+    <section id="About py-20 md:py-32  relative">
+      <div className="container max-w-7xl mx-auto md:px-3">
+        <div className="heading flex flex-col items-center justify-center text-center mb-5 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +44,7 @@ const About = () => {
             className="w-24 px-7 rounded-full h-1 bg-linear-to-r from-indigo-400 to bg-cyan-500"></motion.div>
         </div>
         {/* about section */}
-        <div className="about grid grid-cols-1 px-5 gap-12 items-center lg:grid-cols-12 lg:gap-24  ">
+        <div className="about grid grid-cols-1 px-6 gap-12  items-center lg:grid-cols-12 lg:gap-24 md:px-10  ">
           <div className="left lg:col-span-5">
             <div className="flex-1 relative w-full max-w-md lg:max-w-none mx-auto ">
               <motion.div
@@ -67,38 +69,28 @@ const About = () => {
                     repeat: Infinity, // only shadow repeats ✅
                   },
                 }}
-                className="md:aspect-[4/5] max-w-md mx-auto relative rounded-3xl ">
+                className=" hidden md:block md:aspect-[4/5] max-w-md mx-auto relative rounded-3xl ">
                 <div className="rounded-3xl overflow-hidden">
                   <img
                     className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500  "
-                    src="https://i.pinimg.com/1200x/36/24/85/362485cff39036464d0e54b4bdd3a5b8.jpg"
+                    src={profile2}
                     alt="Profile"
                   />
                 </div>
-                {/* card div */}
-                <div className=" absolute bottom-6 left-6 right-6 bg-slate-900/60 backdrop-blur-md z-50  flex  items-center justify-start border  border-white/10 shadow-xl p-3 rounded-2xl gap-2">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full w-10 h-10 flex items-center justify-center border border-indigo-500/30 bg-indigo-500/20">
-                      <Code className="text-indigo-300" size={20} />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium text-sm">
-                        Open to Work
-                      </p>
-                      <p className="text-slate-400 text-xs">
-                        Seeking SDE Roles
-                      </p>
-                    </div>
-                  </div>
-                </div>
+               
               </motion.div>
             </div>
           </div>
-          <div className="right lg:col-span-7 space-y-10">
+          {/* right section */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 1 }}
+            transition={{ duration: 0.5 }}
+            className="right lg:col-span-7 space-y-10">
+            {/* Professional */}
             <div className="relative space-y-8">
-              <span
-                className="absolute -left-8 top-0 bottom-0 w-1 bg-linear-to-b from-indigo-500 to-transparent rounded-full hidden md:block"
-              />
+              
+              <span className="absolute -left-8 top-0 bottom-0 w-1 bg-linear-to-b from-indigo-500 to-transparent rounded-full hidden md:block" />
               <h3 className="text-2xl font-semibold text-white flex items-center gap-3">
                 <Code className="w-6 h-6 text-indigo-400" />
                 Professional Summary
@@ -111,6 +103,8 @@ const About = () => {
                 cloud-native technologies to build resilient applications.
               </p>
             </div>
+
+            {/* carrier objective */}
             <div className="relative space-y-7">
               <span className="absolute -left-8 top-0 bottom-0 w-1 bg-linear-to-b from-cyan-500 to-transparent rounded-full hidden md:block" />
               <h3 className="text-2xl font-semibold text-white flex items-center gap-3">
@@ -125,8 +119,30 @@ const About = () => {
                 continuously evolving my technical acumen.
               </p>
             </div>
-            <div>Key strengths</div>
-          </div>
+            <div className="flex flex-col gap-4">
+              <div className="inline-flex gap-3 justify-start items-center">
+                <Zap className="text-yellow-300" />
+                <h2 className="text-white text-2xl font-bold">
+                  {" "}
+                  Key Strengths
+                </h2>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                {strengths.map((strength, key) => (
+                  <motion.div
+                  initial={{opacity: 0,scale:0.9}}
+                  whileInView={{opacity:1,scale:1}}
+                  transition={{duration: 0.3 ,delay:key*0.1}}
+                  
+                  key={key} className="flex items-center text-white gap-2 text-md  px-4 py-2 rounded-2xl bg-slate-800/40 border border-slate-700/50 text-slate-300 text-sm font-medium hover:bg-slate-800 hover:border-slate-600 transition-all shadow-sm">
+                    <CircleCheck size={18} className="text-indigo-400" />
+                    {strength}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
