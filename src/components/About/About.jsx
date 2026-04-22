@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import profile2 from "../../assets/profile2.png";
 
 const About = () => {
-  const strengths = ["Problem Solving", " Time management", "Quik learner"];
+  const strengths = ["Problem Solving", " Time management", "Quick learner"];
   return (
-    <section id="About py-20 md:py-32  relative">
+    <section id="About" className="py-20 md:py-32 relative -mt-15">
       <div className="container max-w-7xl mx-auto md:px-3">
         <div className="heading flex flex-col items-center justify-center text-center mb-5 md:mb-20">
           <motion.div
@@ -77,7 +77,6 @@ const About = () => {
                     alt="Profile"
                   />
                 </div>
-               
               </motion.div>
             </div>
           </div>
@@ -89,7 +88,6 @@ const About = () => {
             className="right lg:col-span-7 space-y-10">
             {/* Professional */}
             <div className="relative space-y-8">
-              
               <span className="absolute -left-8 top-0 bottom-0 w-1 bg-linear-to-b from-indigo-500 to-transparent rounded-full hidden md:block" />
               <h3 className="text-2xl font-semibold text-white flex items-center gap-3">
                 <Code className="w-6 h-6 text-indigo-400" />
@@ -131,11 +129,11 @@ const About = () => {
               <div className="flex flex-wrap items-center gap-3">
                 {strengths.map((strength, key) => (
                   <motion.div
-                  initial={{opacity: 0,scale:0.9}}
-                  whileInView={{opacity:1,scale:1}}
-                  transition={{duration: 0.3 ,delay:key*0.1}}
-                  
-                  key={key} className="flex items-center text-white gap-2 text-md  px-4 py-2 rounded-2xl bg-slate-800/40 border border-slate-700/50 text-slate-300 text-sm font-medium hover:bg-slate-800 hover:border-slate-600 transition-all shadow-sm">
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: key * 0.1 }}
+                    key={key}
+                    className="flex items-center text-white gap-2 text-md  px-4 py-2 rounded-2xl bg-slate-800/40 border border-slate-700/50 text-slate-300 text-sm font-medium hover:bg-slate-800 hover:border-slate-600 transition-all shadow-sm">
                     <CircleCheck size={18} className="text-indigo-400" />
                     {strength}
                   </motion.div>

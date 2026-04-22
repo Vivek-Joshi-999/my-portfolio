@@ -1,6 +1,7 @@
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 import './App.css'
 
 
@@ -22,6 +23,7 @@ export default function App() {
         <main className="flex flex-col items-center  ">
           <Hero />
           <About/>
+          <Skills/>
         </main>
       </div>
     </div>
