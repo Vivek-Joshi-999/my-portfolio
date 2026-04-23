@@ -13,21 +13,28 @@ const Navbar = () => {
     { label: "Home", id: "Home" },
     { label: "About", id: "About" },
     { label: "Skills", id: "Skills" },
-    { label: "Projects", id: "projects" },
-    { label: "Education", id: "education" },
-    { label: "Contact", id: "contact" },
+    { label: "Projects", id: "Projects" },
+    { label: "Education", id: "Education" },
+    { label: "Contact", id: "Contact" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setscroll(window.scrollY > 50);
-      console.log("Window scrolled");
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleMobileNav = (id) => {
+    setopen(false);
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
 
   return (
     <motion.header
@@ -40,12 +47,10 @@ const Navbar = () => {
       ? "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-slate-950/70 backdrop-blur-md border-slate-800/50 py-2 shadow-lg shadow-black/10 "
       : "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-transparent py-2"
   }
-  
   `}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex items-center justify-between  ">
-        <div className="flex gap-2 items-center justify-center ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex items-center justify-between">
+        <div className="flex gap-2 items-center justify-center">
           <span className="bg-indigo-500/10 p-2 rounded-xl hover:bg-indigo-500/20 transition-colors">
-            {" "}
             <CodeXml className="text-indigo-400 animate-pulse" />
           </span>
           <span className="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-400">
@@ -65,6 +70,7 @@ const Navbar = () => {
           {open ? <X /> : <ListCollapse />}
         </button>
       </div>
+
       <AnimatePresence>
         {open && (
           <motion.div
@@ -72,16 +78,19 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className=" md:hidden bg-slate-900/80 backdrop-blur-md border-t border-white/10 ">
-            <div className="  flex flex-col px-6 py-4 gap-4 backdrop-blur-md border-t border-white/20 text-white font-semibold">
+            className="md:hidden bg-slate-900/80 backdrop-blur-md border-t border-white/10">
+            <div className="flex flex-col px-6 py-4 gap-4 backdrop-blur-md border-t border-white/20 text-white font-semibold">
               {navItems.map((item) => (
                 <motion.a
                   key={item.label}
                   href={`#${item.id}`}
-                  onClick={() => setopen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMobileNav(item.id);
+                  }}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
-                  className=" w-fit origin-left hover:text-indigo-400">
+                  className="w-fit origin-left hover:text-indigo-400">
                   {item.label}
                 </motion.a>
               ))}
