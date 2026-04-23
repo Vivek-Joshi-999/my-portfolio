@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     // outer layer
     <section
-      id="home"
+      id="Home"
       className="pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden relative min-h-screen flex items-center">
       {/* inner layer */}
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">

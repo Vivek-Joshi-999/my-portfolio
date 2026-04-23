@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-const NavItem = ({ label }) => {
+const NavItem = ({ label, id }) => {
   return (
     <motion.a
-      href="#"
+      href={`#${id}`}
       className="relative pb-1 hover:text-indigo-400 inline-block"
       initial="rest"
       whileHover="hover"

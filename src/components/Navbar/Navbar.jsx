@@ -10,12 +10,12 @@ const Navbar = () => {
   const [scrolled, setscroll] = useState(false);
 
   const navItems = [
-    "Home",
-    "About",
-    "Skills",
-    "Projects",
-    "Education",
-    "Contact",
+    { label: "Home", id: "Home" },
+    { label: "About", id: "About" },
+    { label: "Skills", id: "Skills" },
+    { label: "Projects", id: "projects" },
+    { label: "Education", id: "education" },
+    { label: "Contact", id: "contact" },
   ];
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Navbar = () => {
 
         <nav className="hidden md:flex gap-8 text-slate-300 font-semibold">
           {navItems.map((item) => (
-            <NavItem key={item} label={item} />
+            <NavItem key={item.label} label={item.label} id={item.id} />
           ))}
         </nav>
 
@@ -76,13 +76,13 @@ const Navbar = () => {
             <div className="  flex flex-col px-6 py-4 gap-4 backdrop-blur-md border-t border-white/20 text-white font-semibold">
               {navItems.map((item) => (
                 <motion.a
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={`#${item.id}`}
                   onClick={() => setopen(false)}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                   className=" w-fit origin-left hover:text-indigo-400">
-                  {item}
+                  {item.label}
                 </motion.a>
               ))}
             </div>
