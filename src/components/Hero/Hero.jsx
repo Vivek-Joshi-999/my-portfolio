@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profile2 from "../../assets/profile2.png";
+import profile from "../../assets/profile8.png";
 
 
 import { ArrowRight, Download, Code, Braces } from "lucide-react";
@@ -100,11 +100,11 @@ export default function Hero() {
                 },
               }}
               
-              className="md:aspect-[4/5] max-w-md mx-auto relative rounded-3xl ">
+              className="md:aspect-[4/4] max-w-md mx-auto relative rounded-3xl ">
               <div className="rounded-3xl overflow-hidden">
                 <img
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500  "
-                  src={profile2}
+                  src={profile}
                   alt="Profile"
                 />
               </div>
