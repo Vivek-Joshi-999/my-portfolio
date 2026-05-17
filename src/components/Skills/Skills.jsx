@@ -11,14 +11,14 @@ const Skills = () => {
   <section id="Skills" className=" w-full py-20 md:py-32 relative bg-gradient-to-br from-slate-950/40 via-blue-950/40 to-slate-900/40 ">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-500/5 to-transparent " />
 
- <div className="container mx-auto px-6 md:px-20 max-w-7xl  relative z-10">
-<div className="heading flex flex-col items-center justify-center text-center mb-5 md:mb-20">
+ <div className="container mx-auto px-7 md:px-20 max-w-7xl  relative z-10">
+<div className="heading flex flex-col items-center justify-center text-center mb-5 md:mb-15">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-indigo-400 text-sm font-semibold mb-2">
-            <Boxes  className="w-4 h-4 relative" />
+            <Boxes  className="w-4 h-4 " />
             <span className="leading-none  relative top-[1px]">Technical Arsenal</span>
           </motion.div>
 
@@ -26,9 +26,9 @@ const Skills = () => {
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col text-3xl md:text-6xl px-4 py-2 -mb-4 ">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white mb-5">
-              Skills & <span className="text-3xl md:text-5xl font-bold py-auto  leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 ">
+            className="flex text-3xl md:text-6xl px-4 py-2 -mb-4 ">
+            <h1 className=" font-bold leading-tight text-white mb-5">
+              Skills & <span className="font-bold py-auto  leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 ">
               Expertise
             </span>
             </h1>

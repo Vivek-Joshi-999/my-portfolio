@@ -2,6 +2,7 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
+import Education from "./components/Education/Education";
 import './App.css'
 
 
@@ -24,6 +25,7 @@ export default function App() {
           <Hero />
           <About/>
           <Skills/>
+          <Education/>
         </main>
       </div>
     </div>

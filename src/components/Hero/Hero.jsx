@@ -53,15 +53,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href="#projects"
-                className="px-6 font-medium font-semibold  text-white rounded-xl py-3 group inline-flex transition-all items-center gap-1 bg-indigo-600 hover:scale-105 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]">
-                View Projects{" "}
-                <ArrowRight
-                  size={22}
-                  className=" group-hover:translate-x-1 transition-transform"
-                />{" "}
-              </a>
+            
 
               <a
                 href="/resume.pdf"
