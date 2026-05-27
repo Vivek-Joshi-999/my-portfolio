@@ -43,7 +43,7 @@ const Education = () => {
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="heading flex  text-3xl md:text-6xl px-4 py3 items-center justify-center mb-2">
+            className="heading flex  text-3xl md:text-6xl px-4 py-3 items-center justify-center mb-2">
             <h1 className="font-bold text-white leading-tight">
               Education &{" "}
               <span className="font-bold  py-auto text-transparent bg-clip-text bg-gradient-to-r  from-indigo-400 to bg-cyan-400">

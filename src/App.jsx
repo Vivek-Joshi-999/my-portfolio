@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
-import './App.css'
-
+import Contact from "./components/Contact/Contact";
+import "./App.css";
 
 export default function App() {
   return (
@@ -23,9 +23,10 @@ export default function App() {
         {/* HERO */}
         <main className="flex flex-col items-center  ">
           <Hero />
-          <About/>
-          <Skills/>
-          <Education/>
+          <About />
+          <Skills />
+          <Education />
+          <Contact />
         </main>
       </div>
     </div>
