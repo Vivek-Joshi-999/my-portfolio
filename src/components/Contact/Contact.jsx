@@ -1,7 +1,7 @@
 import { MailPlus, Mail, Phone, MapPin, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef,useState } from "react";
+import { useRef, useState } from "react";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -177,18 +177,13 @@ const Contact = () => {
                   <Send className="w-5 h-5" />
                 </button>
 
-                {
-  success && (
-    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-5 py-4 rounded-2xl shadow-lg border border-green-400 animate-pulse">
-      
-      <h3 className="font-semibold text-lg">
-        Message Sent Successfully 
-      </h3>
-
-
-    </div>
-  )
-}
+                {success && (
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-5 py-4 rounded-2xl shadow-lg border border-green-400 animate-pulse">
+                    <h3 className="font-semibold text-lg">
+                      Message Sent Successfully
+                    </h3>
+                  </div>
+                )}
               </div>
             </form>
           </motion.div>

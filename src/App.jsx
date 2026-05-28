@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
+import  Footer  from "./components/footer/Footer";
 import "./App.css";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Skills />
           <Education />
           <Contact />
+          <Footer/>
         </main>
       </div>
     </div>
