@@ -97,14 +97,14 @@ const Education = () => {
                       {item.institution}
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-slate-400 mb-6">
-  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-slate-400 mb-6">
+  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 shrink-0">
     <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
-    <span className="truncate">{item.period}</span>
+    <span>{item.period}</span>
   </div>
-  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 min-w-0">
+  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 shrink-0">
     <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
-    <span className="truncate">{item.location}</span>
+    <span className="whitespace-nowrap">{item.location}</span>
   </div>
 </div>
                   </div>
