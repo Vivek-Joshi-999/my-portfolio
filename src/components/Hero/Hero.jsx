@@ -43,9 +43,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-base  text-slate-400 md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              I build scalable web applications and explore the latest in cloud
-              technologies. Passionate about solving complex problems with
-              elegant, robust code and seamless user experiences.
+           I build responsive web applications and enjoy creating clean, user-friendly, and efficient solutions. Passionate about problem-solving and continuously learning modern web development technologies.
+
             </motion.p>
 
             <motion.div

@@ -94,11 +94,8 @@ const About = () => {
                 Professional Summary
               </h3>
               <p className="text-slate-400 text-lg leading-relaxed">
-                As an MCA student specializing in Full Stack Development and
-                Cloud Computing, I bridge the gap between elegant frontend
-                interfaces and robust backend architectures. My journey involves
-                crafting scalable web solutions and diving deep into
-                cloud-native technologies to build resilient applications.
+                I’m an MCA student specializing in Full Stack Development and Cloud Computing. I enjoy building responsive and user-friendly web applications, working with both frontend and backend technologies, and improving my skills in modern web development.
+
               </p>
             </div>
 
@@ -110,11 +107,8 @@ const About = () => {
                 Career Objective
               </h3>
               <p className="text-slate-400 text-lg leading-relaxed">
-                To leverage my comprehensive understanding of software
-                engineering principles and hands-on experience with modern
-                frameworks in a dynamic tech environment. I aim to contribute to
-                innovative projects that solve real-world problems while
-                continuously evolving my technical acumen.
+               To use my knowledge of software development and modern web technologies in a dynamic environment, contribute to real-world projects, and continuously improve my technical and problem-solving skills.
+
               </p>
             </div>
             <div className="flex flex-col gap-4">

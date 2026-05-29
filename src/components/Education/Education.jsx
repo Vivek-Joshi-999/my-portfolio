@@ -1,5 +1,5 @@
 import React from "react";
-import { GraduationCap, Award,Calendar ,MapPin } from "lucide-react";
+import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Education = () => {
@@ -14,8 +14,7 @@ const Education = () => {
       degree: "Bachloer of computer application (BCA)",
       institution: "Nibm College",
       period: "2021-2023",
-      location: "Rajsamand, Rajasthan"
-
+      location: "Rajsamand, Rajasthan",
     },
   ];
   return (
@@ -76,7 +75,6 @@ const Education = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-               
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative flex flex-col md:flex-row items-start ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                 {/* Timeline Marker */}
@@ -87,32 +85,30 @@ const Education = () => {
                 </div>
 
                 {/* card box */}
-              {/* Change ml-20 to ml-16 and add overflow handling */}
-<div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pl-16" : "md:pr-16"}`}>
-  <div className="p-6 md:p-8 rounded-3xl bg-slate-800/40 backdrop-blur-md border border-slate-700 hover:border-indigo-500/50 transition-colors shadow-xl group">
-    
-    <h1 className="font-bold text-white text-xl md:text-2xl mb-2 group-hover:text-indigo-400">
-      {item.degree}
-    </h1>
+                {/* Change ml-20 to ml-16 and add overflow handling */}
+                <div
+                  className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pl-16" : "md:pr-16"}`}>
+                  <div className="p-6 md:p-8 rounded-3xl bg-slate-800/40 backdrop-blur-md border border-slate-700 hover:border-indigo-500/50 transition-colors shadow-xl group">
+                    <h1 className="font-bold text-white text-xl md:text-2xl mb-2 group-hover:text-indigo-400">
+                      {item.degree}
+                    </h1>
 
-    <div className="text-lg md:text-xl text-slate-300 font-medium mb-4">
-      {item.institution}
-    </div>
+                    <div className="text-lg md:text-xl text-slate-300 font-medium mb-4">
+                      {item.institution}
+                    </div>
 
-    {/* FIXED: stack vertically on mobile, row on wider screens */}
-    <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 text-sm text-slate-400 mb-6">
-      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
-        <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
-        <span>{item.period}</span>
-      </div>
-      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
-        <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
-        <span>{item.location}</span>
-      </div>
-    </div>
-
-  </div>
-</div>
+                    <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 text-sm text-slate-400 mb-6">
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
+                        <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
+                        <span>{item.period}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
+                        <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
+                        <span>{item.location}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
