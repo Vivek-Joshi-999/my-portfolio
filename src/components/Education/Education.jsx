@@ -14,7 +14,7 @@ const Education = () => {
       degree: "Bachloer of computer application (BCA)",
       institution: "Nibm College",
       period: "2021-2023",
-      location: "Rajsamand, Rajasthan",
+      location: "Rajsamand, Rajasthan"
 
     },
   ];
@@ -97,16 +97,16 @@ const Education = () => {
                       {item.institution}
                     </div>
 
-                     <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-6">
-                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
-                        <Calendar className="w-4 h-4 text-cyan-400" />
-                        {item.period}
-                      </div>
-                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
-                        <MapPin className="w-4 h-4 text-cyan-400" />
-                        {item.location}
-                      </div>
-                      </div>
+                    <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-slate-400 mb-6">
+  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 min-w-0">
+    <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
+    <span className="truncate">{item.period}</span>
+  </div>
+  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 min-w-0">
+    <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
+    <span className="truncate">{item.location}</span>
+  </div>
+</div>
                   </div>
 
                   
