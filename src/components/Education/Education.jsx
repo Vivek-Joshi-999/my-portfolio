@@ -12,7 +12,7 @@ const Education = () => {
     },
     {
       degree: "Bachloer of computer application (BCA)",
-      institution: "Jecrc Univercity",
+      institution: "Nibm College",
       period: "2021-2023",
       location: "Rajsamand, Rajasthan",
 
